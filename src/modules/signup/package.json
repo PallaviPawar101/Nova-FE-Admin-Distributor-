@@ -1,0 +1,6 @@
+{
+    "name": "@module/signup",
+    "version": "1.0.1",
+    "author": "Kiran Kumar (ch.kirankumar311@gmail.com)",
+    "main": "./src/index.js"
+}
