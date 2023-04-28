@@ -1,0 +1,38 @@
+.slidingContainer{
+    width:300px;
+}
+.sliderMain{
+    border-radius: 7px;
+}
+.sliderContent{
+    bottom: -2px;
+    width: 100%;
+    border-radius: 7px;
+}
+.text{
+    font-family: sans-serif, cursive;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-image: linear-gradient(rgb(142,135,28), rgb(142,135,28));
+  
+
+   animation-name: textFrame;
+   animation-duration: 2s;
+}
+
+@keyframes textFrame {
+    from {
+        background-size: 100% 10px;
+  background-repeat: no-repeat;
+  background-position: 100% 0%;
+   transition: background-size .7s, background-position .5s ease-in-out;
+    }
+    to{
+        background-size: 100% 100%;
+        background-position: 0% 100%;
+        transition: background-position .7s, background-size .5s ease-in-out;
+    }
+}

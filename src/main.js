@@ -4,7 +4,7 @@ import router from "./router";
 import SignUpModule from "@/modules/signup"
 import { createPinia } from 'pinia';
 import VueModular from './plugins/VueModular';
-
+import 'bootstrap/dist/css/bootstrap.css'
 function bootApp() {
     createApp(App)
         .use(VueModular,

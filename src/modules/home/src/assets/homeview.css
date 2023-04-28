@@ -1,0 +1,40 @@
+.bgImageBox {
+    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)), url("../assets/image.jpg");
+    height: 700px;
+    background-size: cover;
+
+}
+
+.contentText {
+    color: white;
+    font-size: 30px;
+    width: 150px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    font-weight: bold;
+}
+.slidingProducts{
+    margin-top: 250px;
+}
+.navbar {
+    border-radius: 15px;
+}
+.topPics{
+    margin-top: 50px;
+}
+.topPicsHeader{
+    font-weight: bold;
+    font-size: 35px;
+}
+@media screen and (max-width:450px) {
+    .bgImageBox {
+        background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)), url("../assets/image.jpg");
+        height: 500px;
+        background-size: cover;
+    }
+    .slidingProducts{
+        margin-top: 70px;
+    }
+}

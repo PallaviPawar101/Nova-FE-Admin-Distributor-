@@ -1,0 +1,57 @@
+.brandName{
+    margin-left:2%;
+}
+.searchBar{
+    position: relative;
+    left:-40%;
+}
+.profileBox{
+    width:50px;
+    height:50px;
+    border: 1px solid red;
+    border-radius: 50%;
+   position: relative;
+   margin-left: -100px;   
+}
+.profileName{
+    position: relative;
+    top:30px;
+    left:30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    visibility: hidden;
+}
+.navContainer{
+    position: sticky;
+    margin-top: 5px;
+    width:95%;
+    margin-left: 2.5%;
+    border-radius: 30px;
+}
+@media screen and (max-width:450px) {
+    .rightBox{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .brandName{
+        margin-left: 0;
+    }
+    .searchBar{
+        left:0;
+        margin-top: 20px;
+    }
+    .profileBox{
+        top:10px;
+        left:-390%;
+    }
+    .profileName{
+        top:25px;
+        left:-300%;
+        visibility: visible;
+    }
+    .navContainer{
+        width:100%;
+        margin-left: 0;
+        margin-top: 0;
+    }
+}
