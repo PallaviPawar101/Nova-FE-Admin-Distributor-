@@ -1,8 +1,8 @@
 <template>
     <div class="homeContainer">
         <div class="bgImageBox">
-            <div class="position-relative navbar">
-                <NavBar/>
+            <div class="navbar navBar">
+                <NavBar />
             </div>
 
             <div class="contentText">
@@ -13,19 +13,20 @@
 
             <div class="slidingProducts">
 
-                <SlidingProducts/>
+                <SlidingProducts />
             </div>
 
             <div class="container topPics">
                 <div class="topPicsHeader">
                     Top 3 pics of today..
                 </div>
-                <div>
-                    <TopPicProducts/>
+                <div class="container productContainer">
+                    <ProductCard v-for="product in productsdata" :product="product" :key="product.id"/>
                 </div>
             </div>
         </div>
-        <div>
+        <div  class="footerBar">
+            <FooterBar/>
         </div>
     </div>
 </template>
@@ -34,13 +35,20 @@
 import NavBar from '@/globalcomponents/NavBar.vue';
 import "../assets/homeview.css"
 import SlidingProducts from '../components/SlidingProducts.vue';
-import TopPicProducts from '../components/TopPicProducts.vue';
-export default{
-    components:{
+import ProductCard from '@/globalcomponents/ProductCard.vue';
+import FooterBar from '@/globalcomponents/FooterBar.vue';
+import productDataMixin from '@/mixins/productDataMixin';
+export default {
+    components: {
     NavBar,
     SlidingProducts,
-    TopPicProducts
+    ProductCard,
+    FooterBar
+},
+  
+    mixins:[productDataMixin]
 }
-}
+
+
 </script>
 

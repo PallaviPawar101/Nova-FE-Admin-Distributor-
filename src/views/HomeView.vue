@@ -1,5 +1,6 @@
 <template>
    <HomeView/>
+   
 </template>
 
 <script>

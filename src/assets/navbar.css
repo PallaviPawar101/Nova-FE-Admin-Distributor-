@@ -28,6 +28,13 @@
     margin-left: 2.5%;
     border-radius: 30px;
 }
+.productsNavLink{
+    position: relative;
+    left:-50px;
+    top:8px;
+    color:black;
+}
+
 @media screen and (max-width:450px) {
     .rightBox{
         display: flex;
@@ -39,6 +46,13 @@
     .searchBar{
         left:0;
         margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    .productsNavLink{
+        left:10px;
+        top:-12px;
     }
     .profileBox{
         top:10px;

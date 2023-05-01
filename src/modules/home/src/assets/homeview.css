@@ -17,9 +17,15 @@
 }
 .slidingProducts{
     margin-top: 250px;
+    
 }
-.navbar {
+
+.navBar {
     border-radius: 15px;
+    position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+    z-index: 2;
 }
 .topPics{
     margin-top: 50px;
@@ -27,6 +33,16 @@
 .topPicsHeader{
     font-weight: bold;
     font-size: 35px;
+}
+.productContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.footerBar{
+    position: relative;
+    top:700px;
 }
 @media screen and (max-width:450px) {
     .bgImageBox {
@@ -36,5 +52,13 @@
     }
     .slidingProducts{
         margin-top: 70px;
+    }
+    .productContainer{
+        flex-direction: column;
+        gap:20px;
+        padding: 20px;
+    }
+    .footerBar{
+        top: 1300px;
     }
 }

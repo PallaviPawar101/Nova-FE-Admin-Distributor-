@@ -4,7 +4,7 @@
             <div class="container-fluid">
                 <div class="d-flex justify-content-between " style="width:100%">
                     <div class="brandName">
-                        <a class="navbar-brand" href="#">SmartBuy</a>
+                        <a class="navbar-brand" href="#" @click="handleHomeRouter">SmartBuy</a>
                     </div>
                     <div>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -17,8 +17,10 @@
                 </div>
 
                 <div :class=" !this.navToggle ? 'collapse navbar-collapse rightBox' : 'navbar-collapse rightBox'" id="navbarSupportedContent ">
-
-                    <div class="searchBar">
+                    <div class="searchBar d-flex">
+                        <div class="productsNavLink">
+                            <router-link to="/products">watches</router-link>
+                        </div>
                         <form class="d-flex">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-success" type="submit">Search</button>
@@ -42,6 +44,7 @@
 </template>
 
 <script>
+import  router  from "@/router";
 import "../assets/navbar.css"
 export default {
     data(){
@@ -52,6 +55,9 @@ export default {
     methods:{
         handleNavToggle(){
             this.navToggle=!this.navToggle;
+        },
+        handleHomeRouter(){
+            router.push('/')
         }
     }
 }

@@ -1,7 +1,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from "./router";
-import SignUpModule from "@/modules/signup"
+import SignUpModule from "@/modules/signup";
+import AllProductsModule from "@/modules/products"
 import { createPinia } from 'pinia';
 import VueModular from './plugins/VueModular';
 import 'bootstrap/dist/css/bootstrap.css'
@@ -13,7 +14,8 @@ function bootApp() {
                  * list of your modules to install in vue app (required)
                  */
                 modules: [
-                    SignUpModule
+                    SignUpModule,
+                    AllProductsModule
                 ],
 
                 /**

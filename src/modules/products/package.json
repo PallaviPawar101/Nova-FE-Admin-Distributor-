@@ -1,0 +1,6 @@
+{
+    "name": "@module/products",
+    "version": "1.0.0",
+    "author": "Kiran Kumar (ch.kirankumar311@gmail.com)",
+    "main": "./src/index.js"
+}
