@@ -21,12 +21,12 @@
                     Top 3 pics of today..
                 </div>
                 <div class="container productContainer">
-                    <ProductCard v-for="product in productsdata" :product="product" :key="product.id"/>
+                    <ProductCard v-for="product in productsdata" :product="product" :key="product.id" />
                 </div>
             </div>
         </div>
-        <div  class="footerBar">
-            <FooterBar/>
+        <div class="footerBar">
+            <FooterBar />
         </div>
     </div>
 </template>
@@ -40,13 +40,13 @@ import FooterBar from '@/globalcomponents/FooterBar.vue';
 import productDataMixin from '@/mixins/productDataMixin';
 export default {
     components: {
-    NavBar,
-    SlidingProducts,
-    ProductCard,
-    FooterBar
-},
-  
-    mixins:[productDataMixin]
+        NavBar,
+        SlidingProducts,
+        ProductCard,
+        FooterBar
+    },
+
+    mixins: [productDataMixin]
 }
 
 

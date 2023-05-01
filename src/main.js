@@ -5,9 +5,13 @@ import SignUpModule from "@/modules/signup";
 import AllProductsModule from "@/modules/products"
 import { createPinia } from 'pinia';
 import VueModular from './plugins/VueModular';
-import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/css/bootstrap.css';
+import GlobalMixin from './mixins/GlobalMixin';
+
+let app=createApp(App);
+app.component(GlobalMixin)
 function bootApp() {
-    createApp(App)
+   app
         .use(VueModular,
             {
                 /**
@@ -31,6 +35,8 @@ function bootApp() {
 }
 
 bootApp();
+
+
 
 
 

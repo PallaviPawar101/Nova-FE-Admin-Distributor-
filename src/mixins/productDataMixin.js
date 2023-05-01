@@ -9,12 +9,17 @@ export default{
     },
     methods:{
         async handleGetData(){
-            const data=await axios.get("http://localhost:8000/products");
-            const res=await data.data;
-            this.productsdata=res;
+            try{
+                const data=await axios.get(`${process.env.VUE_APP_BASEURL}/products`);
+                const res=await data.data;
+                this.productsdata=res;
+            }catch(err){
+                console.log({message:err.message})
+            }
         },
     },
     created(){
         this.handleGetData();
+        console.log(this.base_api)
     }
 }
