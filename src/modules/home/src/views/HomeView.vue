@@ -38,6 +38,7 @@ import SlidingProducts from '../components/SlidingProducts.vue';
 import ProductCard from '@/globalcomponents/ProductCard.vue';
 import FooterBar from '@/globalcomponents/FooterBar.vue';
 import product from '../api/product';
+import customer from '../api/customer';
 export default {
     components: {
         NavBar,
@@ -46,7 +47,7 @@ export default {
         FooterBar
     },
 
-    mixins: [product]
+    mixins: [product,customer]
 }
 
 
