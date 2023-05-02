@@ -37,7 +37,7 @@ import "../assets/homeview.css"
 import SlidingProducts from '../components/SlidingProducts.vue';
 import ProductCard from '@/globalcomponents/ProductCard.vue';
 import FooterBar from '@/globalcomponents/FooterBar.vue';
-import productDataMixin from '@/mixins/productDataMixin';
+import product from '../api/product';
 export default {
     components: {
         NavBar,
@@ -46,7 +46,7 @@ export default {
         FooterBar
     },
 
-    mixins: [productDataMixin]
+    mixins: [product]
 }
 
 
