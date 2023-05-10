@@ -4,7 +4,11 @@ import axios from "axios";
 export default{
     data(){
         return{
-            productsdata:[]
+            productsdata:[],
+            errorShow:{
+                state:false,
+                title:"",
+            }
         }
     },
     methods:{
@@ -15,10 +19,12 @@ export default{
                 const res=await data.data;
                 this.productsdata=res;
             }catch(err){
-                console.log({message:err.message})
-                console.log("khghj")
+                this.handleError();
             }
         },
+        handleError(){
+            console.log(this.errorShow)
+        }
     },
     async created(){
         await this.handleGetData();
