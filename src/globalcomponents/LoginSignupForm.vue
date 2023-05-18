@@ -22,7 +22,7 @@
                     <!-- <div> -->
 
                         <label for="">Password</label>
-                        <input type="password"  placeholder="Password here..." class="form-control" v-model="store.password">
+                        <input type="password" data-test="input"  placeholder="Password here..." class="form-control" v-model="store.password">
                     <!-- </div> -->
                     <div class="repassword" v-if="!handleLoginPageShow">
 
@@ -30,7 +30,7 @@
                         <input type="text"  placeholder="Re enter password here..." class="form-control" v-model="store.repassword">
                     </div>
                         <br/>
-                    <button type="submit" class="btn btn-primary" @click.prevent="handleUserAuth()">{{handleLoginPageShow ? 'Login' : 'Signup'}}</button>
+                    <button type="submit" data-testid=loginOrsignup class="btn btn-primary" @click.prevent="handleUserAuth()">{{handleLoginPageShow ? 'Login' : 'Signup'}}</button>
                 </form>
                 <br/>
                <div style="text-align: center;">
