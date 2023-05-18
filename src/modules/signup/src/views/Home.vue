@@ -1,22 +1,14 @@
 <template>
-    <h1>SignUp Page</h1>
-    {{ globalStoree.text }}
-    <br/>
-    {{ signupStore.text }}
+    <LoginSignupForm/>
 </template>
 
 <script>
-import { globalStore } from '@/store';
-import {useLocalStore} from "../store"
+import LoginSignupForm from '@/globalcomponents/LoginSignupForm.vue';
+
 export default{
-    name:'SignUp',
-    setup(){
-        const globalStoree=globalStore();
-        const signupStore=useLocalStore()
-        return{
-            globalStoree,
-            signupStore
-        }
-    }
+    name: "SignUp",
+    setup() {
+    },
+    components: { LoginSignupForm }
 }
 </script>
