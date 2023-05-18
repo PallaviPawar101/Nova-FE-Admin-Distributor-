@@ -2,7 +2,8 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from "./router";
 import SignUpModule from "@/modules/signup";
-import AllProductsModule from "@/modules/products"
+import AllProductsModule from "@/modules/products";
+import LoginChekingModule from "@/modules/login/src"
 import { createPinia } from 'pinia';
 import VueModular from './plugins/VueModular';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -19,7 +20,8 @@ function bootApp() {
                  */
                 modules: [
                     SignUpModule,
-                    AllProductsModule
+                    AllProductsModule,
+                    LoginChekingModule
                 ],
 
                 /**

@@ -1,0 +1,7 @@
+{
+    "name": "@module/home",
+    "version": "1.0.0",
+    "author": "Kiran Kumar (kirankumar.challagiri@hexafoldtech.com)",
+    "main": "./src/index.js"
+  }
+  

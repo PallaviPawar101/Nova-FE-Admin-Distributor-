@@ -14,13 +14,14 @@ export default{
     methods:{
         async handleGetData(){
             try{
-                console.log(process.env.VUE_APP_BASEURL,"api")
-                const data=await axios.get(`${process.env.VUE_APP_BASEURL}/product`);
-                const res=await data.data;
+                const data=await axios.get(`${process.env.VUE_APP_BASEAPI}products`);
+                const res=await data.data.products;
                 this.productsdata=res;
             }catch(err){
                 this.handleError("can't get the products, try after some time");
             }
+
+
         },
         handleError(title){
             this.errorShow.title=title
@@ -30,6 +31,7 @@ export default{
     },
     async created(){
         await this.handleGetData();
-        console.log("api",process.env.VUE_APP_BASEURL)
-    }
+    },
+   
+
 }

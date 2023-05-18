@@ -21,19 +21,44 @@
                         <div class="productsNavLink">
                             <router-link to="/products">watches</router-link>
                         </div>
+                        <div class="productsNavLink" style="margin-left: 50px;" v-if="store.isLoggedIn">
+                            <router-link to="/products">cart</router-link>
+                        </div>
                         <form class="d-flex">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-success" type="submit">Search</button>
                         </form>
                     </div>
 
-                    <div class="d-flex ">
+                    <div class="d-flex " v-if="store.isLoggedIn">
                         
-                       <div class="profileBox">
+                       <div class="profileBox" >
                             
                        </div>
-                       <div class="profileName" v-show="this.navToggle">profile</div>
+                       <div class="profileName" v-show="this.navToggle" @click="handleProfileDropDown">
+                    
+                    <!-- dd -->
+                    
                     </div>
+                       
+                       <!-- <div class="profileDropdown" v-if="!profileDropDown">
+                        <div>
+                            Notofications
+                        </div>
+                        <div>
+                            Orders
+                        </div>
+                        <div>
+                            Logout
+                        </div>
+                       </div> -->
+                    </div>
+
+                    <div v-if="!store.isLoggedIn" class="loginLink">
+                        <router-link to="/login">Login</router-link>
+                    </div>
+
+                   
 
 
          
@@ -45,11 +70,19 @@
 
 <script>
 import  router  from "@/router";
-import "../assets/navbar.css"
+import "../assets/navbar.css";
+import {useGlobalStore} from "@/store/index"
 export default {
     data(){
         return{
-            navToggle:false
+            navToggle:false,
+            profileDropDown:false
+        }
+    },
+    setup(){
+        const store=useGlobalStore();
+        return{
+            store
         }
     },
     methods:{
@@ -58,6 +91,9 @@ export default {
         },
         handleHomeRouter(){
             router.push('/')
+        },
+        handleProfileDropDown(){
+            this.profileDropDown=true;
         }
     }
 }

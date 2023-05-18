@@ -34,6 +34,39 @@
     top:8px;
     color:black;
 }
+.profileDropdown{
+    position: absolute;
+    margin-left:-7rem;
+    top:3.5rem;
+    z-index: 2;
+    background-color: white;
+    width:150px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 7px;
+}
+.profileDropdown>div{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    height: 45px;
+    line-height: 3;
+}
+.profileDropdown>div:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    cursor: pointer;
+}
+.loginLink{
+    position: relative;
+    margin-left: -80px;
+    left:-1rem;
+}
+
+/*  */
+
+
+
+
+
+/*  */
 
 @media screen and (max-width:450px) {
     .rightBox{
